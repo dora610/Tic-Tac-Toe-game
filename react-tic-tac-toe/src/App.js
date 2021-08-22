@@ -79,17 +79,8 @@ function App() {
         </>
       )}
       </div>
-
-
-
-
     </div>
   );
 }
-
-// <span>
-//   Try again
-// </span>
-//   <img src={resetImg} alt="reset-img" className="resetImg"/>
 
 export default App;

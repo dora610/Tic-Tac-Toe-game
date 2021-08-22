@@ -6,9 +6,11 @@
   padding: 5px;
   margin: 5px;
 }
+
 .container h2{
   color: #ff5440
 }
+
 .matrix {
   display: flex;
   justify-content: space-evenly;
