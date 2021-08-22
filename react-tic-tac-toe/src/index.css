@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   justify-content: center;
   background: #eeeeee;
+  font-family: cursive;
 }
 
 code {

@@ -6,7 +6,9 @@
   padding: 5px;
   margin: 5px;
 }
-
+.container h2{
+  color: #ff5440
+}
 .matrix {
   display: flex;
   justify-content: space-evenly;
@@ -15,7 +17,7 @@
   width: 400px;
   height: 400px;
   margin: 20px;
-  margin-top: 10vh;
+  margin-top: 3vh;
   padding: 10px;
   flex-wrap: wrap;
 }
@@ -35,21 +37,48 @@ img {
   height: 100px;
 }
 
+img.resetImg{
+  width: 15px;
+  height: 15px;
+}
+
 .player {
   padding: 3px;
   margin-top: 10px;
-  color: brown;
+  color: #ff5440;
   text-transform: uppercase;
 }
 
-.message {
+.message h5{
   color: red;
   font-weight: bold;
 }
 
-button{
+.message{
+  text-align: center;
+  text-transform: capitalize;
+  margin: 10px;
   padding: 5px;
-  border-radius: 5px;
-  border: 1px solid black;
-  background: lightyellow
+}
+
+.message h3{
+  color: #ff5440;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 3px rgb(224, 36, 14, 0.6);
+}
+
+.message span{
+  padding-right: 7px;
+}
+
+button{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #add8e6;
+  background: #add8e6;
+  font-size: medium;
+  font-family: cursive;
+  color: #ff5440;
 }
