@@ -11,6 +11,11 @@
   color: #ff5440
 }
 
+.radio_palyer{
+  position: absolute;
+  top: 75px;
+}
+
 .matrix {
   display: flex;
   justify-content: space-evenly;
@@ -19,7 +24,7 @@
   width: 400px;
   height: 400px;
   margin: 20px;
-  margin-top: 3vh;
+  margin-top: 4vh;
   padding: 10px;
   flex-wrap: wrap;
 }
@@ -46,37 +51,40 @@ img.resetImg{
 
 .player {
   padding: 3px;
-  margin-top: 10px;
   color: #ff5440;
   text-transform: uppercase;
 }
 
-.message h5{
+.promt-message{
   color: red;
   font-weight: bold;
+  position: absolute;
+  bottom: 20vh;
+  width: 32vw;
 }
 
 .message{
   text-align: center;
   text-transform: capitalize;
-  margin: 10px;
+  margin: 15px;
   padding: 5px;
 }
 
-.message h3{
+.success-message h4{
   color: #ff5440;
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 1px 2px 3px rgb(224, 36, 14, 0.6);
+  margin-top: 2px;
+  margin-bottom: 10px;
 }
-
-.message span{
-  padding-right: 7px;
+.success-message span{
+  padding: 10px;
 }
 
 button{
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
   border-radius: 10px;
   border: 1px solid #add8e6;
   background: #add8e6;
