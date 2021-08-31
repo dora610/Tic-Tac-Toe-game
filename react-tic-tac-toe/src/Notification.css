@@ -1,0 +1,21 @@
+.notification_toast {
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  /* position: absolute; */
+  /* bottom: -10vh; */
+  width: 50vw;
+  background-color: rgb(255, 144, 104);
+  /* color: #fff; */
+  /* z-index: 2; */
+  text-align: center;
+  z-index: 2;
+  height: 70px;
+  border-radius: 25px;
+  display: none;
+}
+
+.notification_toast.active {
+  display: block;
+}

@@ -1,4 +1,4 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,13 +7,14 @@
   margin: 5px;
 }
 
-.container h2{
-  color: #ff5440
+.container h2 {
+  color: #ff5440;
+  position: relative;
 }
 
-.radio_palyer{
+.radio_palyer {
   position: absolute;
-  top: 75px;
+  top: 10vh;
 }
 
 .matrix {
@@ -27,6 +28,7 @@
   margin-top: 4vh;
   padding: 10px;
   flex-wrap: wrap;
+  /* position: relative; */
 }
 
 .cell {
@@ -44,7 +46,7 @@ img {
   height: 100px;
 }
 
-img.resetImg{
+img.resetImg {
   width: 15px;
   height: 15px;
 }
@@ -55,22 +57,22 @@ img.resetImg{
   text-transform: uppercase;
 }
 
-.promt-message{
+.promt-message {
   color: red;
   font-weight: bold;
-  position: absolute;
-  bottom: 20vh;
+  /* position: absolute; */
+  /* bottom: -10vh; */
   width: 32vw;
 }
 
-.message{
+.message {
   text-align: center;
   text-transform: capitalize;
   margin: 15px;
   padding: 5px;
 }
 
-.success-message h4{
+.success-message h4 {
   color: #ff5440;
   font-weight: bold;
   text-transform: uppercase;
@@ -78,11 +80,11 @@ img.resetImg{
   margin-top: 2px;
   margin-bottom: 10px;
 }
-.success-message span{
+.success-message span {
   padding: 10px;
 }
 
-button{
+button {
   padding: 10px;
   margin: 5px;
   border-radius: 10px;
