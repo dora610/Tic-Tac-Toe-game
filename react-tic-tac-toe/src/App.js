@@ -2,16 +2,16 @@ import { useState } from 'react';
 import './App.css';
 import circleImg from './assets/circle.png';
 import crossImg from './assets/cancel.png';
-// import resetImg from './assets/circular-arrow.png';
+
 import checkWinner from './winLogic';
-import Notification from './Notification';
+import Toast from './Toast';
 
 function App() {
   const nullArray = new Array(9).fill(null);
   const [itemArr, setitemArr] = useState(nullArray);
   const [isCross, setisCross] = useState(true);
-  // const [winner, setWinner] = useState('');
-  const [message, setMessage] = useState('');
+  const [winner, setWinner] = useState('');
+  const [notif, setNotif] = useState('');
   const [playerSelected, setPlayerSelected] = useState(false);
 
   const choosePlayer = (e) => {
@@ -20,38 +20,40 @@ function App() {
   };
 
   const clickHandler = (index) => {
-    if (message.includes('won')) {
-      // alert('Click on Try Again for a new game');
+    if (winner) {
+      setNotif(`${winner} won 🥇, retry`);
       return;
     }
     if (itemArr[index]) {
-      setMessage('Already taken');
+      setNotif('Already taken');
       return;
     }
+
     setPlayerSelected(true);
     itemArr[index] = isCross ? 'cross' : 'circle';
     setitemArr([...itemArr]);
     setisCross(!isCross);
-    const winner = checkWinner(itemArr);
-    if (winner) {
-      // setWinner(winner);
-      setMessage(`${winner} won`);
-    } else {
-      setMessage('');
+    setNotif('');
+    const isWinner = checkWinner(itemArr);
+    if (isWinner) {
+      setWinner(isWinner);
+      setNotif(`Yeh! ${isWinner} won 🥇🎆`);
     }
   };
 
   const resetHandler = () => {
     setitemArr(nullArray);
-    setMessage('');
-    // setWinner('');
+    setNotif('');
+    setWinner('');
     setisCross(true);
     setPlayerSelected(false);
   };
 
+  const clearNotif = () => setNotif('');
+
   return (
     <div className="container">
-      <Notification messageTxt={message} />
+      <Toast messageText={notif} clearNotif={clearNotif} reset={resetHandler} />
       <h3>a dumb tic-tac-toe game</h3>
       {!playerSelected ? (
         <div className="radio_palyer">
@@ -76,7 +78,7 @@ function App() {
         </div>
       ) : (
         <div className="player">
-          {`${isCross ? 'Cross' : 'Circle'} is playing`}
+          {isCross ? 'Cross' : 'Circle'} {winner ? ' lost' : ' is playing'}
         </div>
       )}
 

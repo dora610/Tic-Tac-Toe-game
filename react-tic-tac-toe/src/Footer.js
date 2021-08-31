@@ -1,18 +1,28 @@
-import "./Footer.css"
+import './Footer.css';
 
-function Footer(){
+function Footer() {
   return (
     <div className="footer">
-    Icons made by{" "}
+      {/* Icons made by{" "}
     <a href="https://www.freepik.com" title="Freepik">
       Freepik
     </a>{" "}
     from{" "}
     <a href="https://www.flaticon.com/" title="Flaticon">
       www.flaticon.com
-    </a>
+    </a> */}
+      <p>
+        Icons made by{' '}
+        <a href="https://www.freepik.com" title="Freepik">
+          Freepik
+        </a>{' '}
+        from{' '}
+        <a href="https://www.flaticon.com/" title="Flaticon">
+          www.flaticon.com
+        </a>
+      </p>
     </div>
   );
 }
 
-export default Footer
+export default Footer;
