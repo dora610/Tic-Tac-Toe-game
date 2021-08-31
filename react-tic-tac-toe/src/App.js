@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import circleImg from './assets/circle.png';
 import crossImg from './assets/cancel.png';
-import resetImg from './assets/circular-arrow.png';
+// import resetImg from './assets/circular-arrow.png';
 import checkWinner from './winLogic';
 import Notification from './Notification';
 
@@ -21,7 +21,7 @@ function App() {
 
   const clickHandler = (index) => {
     if (message.includes('won')) {
-      alert('Click on Try Again for a new game');
+      // alert('Click on Try Again for a new game');
       return;
     }
     if (itemArr[index]) {
@@ -52,8 +52,8 @@ function App() {
   return (
     <div className="container">
       <Notification messageTxt={message} />
-      <h2>a dumb tic-tac-toe game</h2>
-      {!playerSelected && (
+      <h3>a dumb tic-tac-toe game</h3>
+      {!playerSelected ? (
         <div className="radio_palyer">
           <input
             type="radio"
@@ -74,6 +74,10 @@ function App() {
           />
           <label htmlFor="circle">Circle</label>
         </div>
+      ) : (
+        <div className="player">
+          {`${isCross ? 'Cross' : 'Circle'} is playing`}
+        </div>
       )}
 
       <div className="matrix">
@@ -88,29 +92,7 @@ function App() {
           </div>
         ))}
       </div>
-
-      <div className="message">
-        {winner ? (
-          <div className="success-message">
-            <h4>{message}</h4>
-            <button onClick={resetHandler}>
-              <span>Try again</span>
-              <img src={resetImg} alt="reset-img" className="resetImg" />
-            </button>
-          </div>
-        ) : (
-          <>
-            {/* <div className="promt-message">
-              <h5>{message}</h5>
-            </div> */}
-
-            <div className="player">
-              {`${isCross ? 'Cross' : 'Circle'} is playing`}
-            </div>
-            <button onClick={resetHandler}>Reset</button>
-          </>
-        )}
-      </div>
+      <button onClick={resetHandler}>Reset</button>
     </div>
   );
 }

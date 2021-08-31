@@ -1,21 +1,26 @@
 .notification_toast {
-  color: red;
-  font-weight: bold;
+  width: 450px;
+  /* width: 75vw; */
   position: absolute;
   top: 0;
-  /* position: absolute; */
-  /* bottom: -10vh; */
-  width: 50vw;
-  background-color: rgb(255, 144, 104);
-  /* color: #fff; */
-  /* z-index: 2; */
+  transform: translateY(-200%);
+  background: #f5f5f6;
   text-align: center;
-  z-index: 2;
-  height: 70px;
-  border-radius: 25px;
-  display: none;
+  z-index: 10;
+  border: double #4ccfe0;
+  color: #ef5350;
+  font-weight: bold;
+  transition: transform 0.5s ease-out;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .notification_toast.active {
-  display: block;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in;
+}
+
+@media screen and (max-width: 450px) {
+  .notification_toast {
+    width: 95vw;
+  }
 }

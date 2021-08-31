@@ -7,62 +7,64 @@
   margin: 5px;
 }
 
-.container h2 {
-  color: #ff5440;
+.container h3 {
+  color: #b61827;
   position: relative;
 }
 
 .radio_palyer {
   position: absolute;
-  top: 10vh;
+  top: 72px;
+  font-size: 15px;
+  color: #ef5350;
+}
+
+.player {
+  color: #ef5350;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  top: 72px;
 }
 
 .matrix {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: #f5f5f6;
   width: 400px;
   height: 400px;
   margin: 20px;
-  margin-top: 4vh;
+  margin-top: 35px;
   padding: 10px;
   flex-wrap: wrap;
-  /* position: relative; */
+  position: relative;
+  z-index: 1;
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  color: coral;
-  padding: 10px;
+  max-width: 120px;
+  max-height: 120px;
+  width: 27vw;
+  height: 27vw;
+  background-color: #4ccfe0;
+  color: #0c0b0b;
+  margin: 5px;
   text-align: center;
   font-size: 30px;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  width: 25vw;
+  height: 25vw;
+  margin-top: 10px;
 }
 
 img.resetImg {
   width: 15px;
   height: 15px;
-}
-
-.player {
-  padding: 3px;
-  color: #ff5440;
-  text-transform: uppercase;
-}
-
-.promt-message {
-  color: red;
-  font-weight: bold;
-  /* position: absolute; */
-  /* bottom: -10vh; */
-  width: 32vw;
 }
 
 .message {
@@ -72,25 +74,47 @@ img.resetImg {
   padding: 5px;
 }
 
-.success-message h4 {
-  color: #ff5440;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: 1px 2px 3px rgb(224, 36, 14, 0.6);
-  margin-top: 2px;
-  margin-bottom: 10px;
-}
-.success-message span {
-  padding: 10px;
-}
-
 button {
   padding: 10px;
   margin: 5px;
   border-radius: 10px;
-  border: 1px solid #add8e6;
-  background: #add8e6;
+  border: none;
+  background: #ef5350;
   font-size: medium;
   font-family: cursive;
-  color: #ff5440;
+  width: 120px;
+}
+
+@media screen and (max-width: 450px) {
+  .container h3 {
+    font-size: 17px;
+  }
+  .matrix {
+    width: 90vw;
+    height: 90vw;
+    margin: 20px;
+    padding: 2vw;
+    margin-top: 50px;
+  }
+  .cell {
+    width: 26vw;
+    height: 26vw;
+  }
+  img {
+    max-width: 100px;
+    max-height: 100px;
+    width: 23vw;
+    height: 23vw;
+    margin-top: 1.5vw;
+  }
+  button {
+    padding: 7px;
+    margin: 4px;
+    border-radius: 10px;
+    border: none;
+    background: #ef5350;
+    font-size: medium;
+    font-family: cursive;
+    width: 90px;
+  }
 }
