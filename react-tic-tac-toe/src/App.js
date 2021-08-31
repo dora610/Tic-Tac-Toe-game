@@ -10,7 +10,7 @@ function App() {
   const nullArray = new Array(9).fill(null);
   const [itemArr, setitemArr] = useState(nullArray);
   const [isCross, setisCross] = useState(true);
-  const [winner, setWinner] = useState('');
+  // const [winner, setWinner] = useState('');
   const [message, setMessage] = useState('');
   const [playerSelected, setPlayerSelected] = useState(false);
 
@@ -34,7 +34,7 @@ function App() {
     setisCross(!isCross);
     const winner = checkWinner(itemArr);
     if (winner) {
-      setWinner(winner);
+      // setWinner(winner);
       setMessage(`${winner} won`);
     } else {
       setMessage('');
@@ -44,7 +44,7 @@ function App() {
   const resetHandler = () => {
     setitemArr(nullArray);
     setMessage('');
-    setWinner('');
+    // setWinner('');
     setisCross(true);
     setPlayerSelected(false);
   };
