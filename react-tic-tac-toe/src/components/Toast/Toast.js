@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Toast.css';
-import resetImg from './assets/circular-arrow.png';
+import resetImg from '../../assets/circular-arrow.png';
 
 function Toast({ messageText, clearNotif, reset }) {
   const [showNotif, setShowNotif] = useState(false);
