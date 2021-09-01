@@ -3,8 +3,8 @@ import './App.css';
 import circleImg from './assets/circle.png';
 import crossImg from './assets/cancel.png';
 
-import checkWinner from './winLogic';
-import Toast from './Toast';
+import checkWinner from './controllers/winnerController';
+import Toast from './components/Toast/Toast';
 
 function App() {
   const nullArray = new Array(9).fill(null);
